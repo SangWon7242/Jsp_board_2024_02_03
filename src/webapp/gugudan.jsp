@@ -5,8 +5,14 @@ int dan = Integer.parseInt(request.getParameter("dan"));
 int limit = Integer.parseInt(request.getParameter("limit"));
 %>
 
-
 <h1><%=dan%>단</h1>
 <% for(int i = 1; i <= limit; i++)  { %>
   <div><%=dan%> * <%=i%> = <%=dan * i%></div>
 <% } %>
+
+<!-- 방식 1 -->
+<%out.println("<h1>인사</h1>");%>
+<!-- 방식 2 -->
+<%="<h1>인사</h1>"%>
+
+<h1>인사</h1>
