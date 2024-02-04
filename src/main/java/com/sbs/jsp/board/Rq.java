@@ -1,10 +1,14 @@
 package com.sbs.jsp.board;
 
+import com.sbs.jsp.board.article.dto.ArticleDto;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 public class Rq {
   private final HttpServletRequest req;
@@ -51,6 +55,23 @@ public class Rq {
   public void appendBody(String str) {
     try {
       resp.getWriter().append(str);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  public void setAttr(String name, Object value) {
+    req.setAttribute(name, value);
+  }
+
+  public void view(String path) {
+    // 서블릿에서 JSP에 작업을 토스
+    RequestDispatcher requestDispatcher = req.getRequestDispatcher("/jsp/" + path + ".jsp");
+
+    try {
+      requestDispatcher.forward(req, resp);
+    } catch (ServletException e) {
+      throw new RuntimeException(e);
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

@@ -33,6 +33,5 @@ public class DispatcherServlet extends HttpServlet {
         memberController.showLogin(rq);
         break;
     }
-
   }
 }
