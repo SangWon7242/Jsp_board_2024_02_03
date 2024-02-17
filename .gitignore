@@ -119,11 +119,10 @@ fabric.properties
 *.class
 
 # Log file
-*.log
 .logs/
 .logs/*.log
 .logs/*.txt
-
+*.log
 # BlueJ files
 *.ctxt
 
