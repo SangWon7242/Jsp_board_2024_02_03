@@ -122,6 +122,7 @@ fabric.properties
 *.log
 .logs/
 .logs/*.log
+localhost_access_log
 
 # BlueJ files
 *.ctxt
