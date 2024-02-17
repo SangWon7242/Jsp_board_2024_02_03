@@ -122,7 +122,7 @@ fabric.properties
 *.log
 .logs/
 .logs/*.log
-localhost_access_log
+.logs/*.txt
 
 # BlueJ files
 *.ctxt
@@ -142,5 +142,8 @@ localhost_access_log
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+work/
+conf/
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,java
