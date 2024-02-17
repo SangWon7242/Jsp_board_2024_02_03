@@ -45,7 +45,7 @@ public class Rq {
   public String getParam(String paramName, String defaultValue) {
     String value = req.getParameter(paramName);
 
-    if(value == null) {
+    if(value == null || value.trim().length() == 0) {
       return  defaultValue;
     }
 
@@ -75,5 +75,13 @@ public class Rq {
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  public String getPath() {
+    return req.getRequestURI();
+  }
+
+  public String getMethod() {
+    return req.getMethod();
   }
 }
