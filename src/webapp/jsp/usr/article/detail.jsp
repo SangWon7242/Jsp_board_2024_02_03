@@ -5,18 +5,25 @@
 ArticleDto article = (ArticleDto)request.getAttribute("article");
 %>
 
-<h1>게시물 상세보기</h1>
+<%@ include file="../common/head.jspf" %>
 
-<div>
-  <% if(article != null) { %>
+<section class="article-detail-wrap">
+  <div class="container px-3 mx-auto">
+    <h1 class="font-bold text-lg">게시물 상세보기</h1>
     <div>
-      ID : <%=article.getId()%>
+      <% if(article != null) { %>
+      <div>
+        ID : <%=article.getId()%>
+      </div>
+      <div>
+        TITLE : <%=article.getTitle()%>
+      </div>
+      <div>
+        BODY : <%=article.getBody()%>
+      </div>
+      <% } %>
     </div>
-    <div>
-      TITLE : <%=article.getTitle()%>
-    </div>
-    <div>
-      BODY : <%=article.getBody()%>
-    </div>
-  <% } %>
-</div>
+  </div>
+</section>
+
+<%@ include file="../common/foot.jspf" %>
