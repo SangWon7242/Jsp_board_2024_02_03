@@ -6,8 +6,7 @@
 List<ArticleDto> articles = (List<ArticleDto>)request.getAttribute("articles");
 %>
 
-<!-- 테일윈드 불러오기 -->
-<script src="https://cdn.tailwindcss.com"></script>
+<%@ include file="../common/head.jspf" %>
 
 <!-- 보통 구혁은 섹션으로 나눈다. -->
 <section class="article-list-wrap">
@@ -40,3 +39,5 @@ List<ArticleDto> articles = (List<ArticleDto>)request.getAttribute("articles");
     </ul>
   </div>
 </section>
+
+<%@ include file="../common/foot.jspf" %>
