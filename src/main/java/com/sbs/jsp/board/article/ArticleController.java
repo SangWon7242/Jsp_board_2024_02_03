@@ -3,7 +3,6 @@ package com.sbs.jsp.board.article;
 import com.sbs.jsp.board.Rq;
 import com.sbs.jsp.board.article.dto.ArticleDto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ArticleController {
