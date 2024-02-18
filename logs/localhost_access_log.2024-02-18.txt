@@ -134,3 +134,11 @@
 0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:30:47 +0900] "GET /usr/article/list/free HTTP/1.1" 200 11429
 0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:30:48 +0900] "GET /usr/article/modify/free/1 HTTP/1.1" 200 3273
 0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:30:50 +0900] "POST /usr/article/modify/free/1 HTTP/1.1" 200 115
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:30:55 +0900] "GET /usr/article/detail/free/1 HTTP/1.1" 200 2295
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:30:56 +0900] "GET /usr/article/list/free HTTP/1.1" 200 11429
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:48:32 +0900] "GET /usr/article/list/free HTTP/1.1" 200 11429
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:48:35 +0900] "GET /usr/article/detail/free/1 HTTP/1.1" 200 2275
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:48:40 +0900] "GET /usr/article/detail/free/5 HTTP/1.1" 200 2262
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:49:31 +0900] "GET /usr/article/detail/free/5 HTTP/1.1" 200 2262
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:49:32 +0900] "GET /usr/article/list/free HTTP/1.1" 200 11429
+0:0:0:0:0:0:0:1 - - [18/Feb/2024:11:49:33 +0900] "GET /usr/article/modify/free/1 HTTP/1.1" 200 3269

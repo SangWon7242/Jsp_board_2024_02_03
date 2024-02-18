@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.sbs.jsp.board.article.dto.ArticleDto" %>
 
-<%
-ArticleDto article = (ArticleDto)request.getAttribute("article");
-%>
-
 <%@ include file="../common/head.jspf" %>
 
 <script>
@@ -36,14 +32,14 @@ ArticleDto article = (ArticleDto)request.getAttribute("article");
       <div>
         <span>제목</span>
         <div>
-          <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요." value="<%=article.getTitle()%>">
+          <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요." value="${article.title}">
         </div>
       </div>
 
       <div>
         <span>내용</span>
         <div>
-          <input name="body" type="text" maxlength="300" placeholder="내용을 입력해주세요." value="<%=article.getBody()%>">
+          <input name="body" type="text" maxlength="300" placeholder="내용을 입력해주세요." value="${article.body}">
         </div>
       </div>
 
