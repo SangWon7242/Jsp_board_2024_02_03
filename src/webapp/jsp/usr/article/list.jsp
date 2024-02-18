@@ -27,7 +27,7 @@ List<ArticleDto> articles = (List<ArticleDto>)request.getAttribute("articles");
           <a class="flex-grow hover:underline hover:text-[red]" href="/usr/article/detail/free/<%=article.getId()%>">
             <%=article.getTitle()%>
           </a>
-          <a class="w-[100px] text-center hover:underline hover:text-[red]" href="/usr/article/delete/free/<%=article.getId()%>">
+          <a onClick="if(!confirm('정말 삭제하시겠습니까?')) return false;" class="w-[100px] text-center hover:underline hover:text-[red]" href="/usr/article/delete/free/<%=article.getId()%>">
             삭제
           </a>
         </li>
