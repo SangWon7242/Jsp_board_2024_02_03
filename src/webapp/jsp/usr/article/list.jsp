@@ -11,7 +11,7 @@ List<ArticleDto> articles = (List<ArticleDto>)request.getAttribute("articles");
 <!-- 보통 구혁은 섹션으로 나눈다. -->
 <section class="article-list-wrap">
   <!-- container(max-width) : 너비가 너무 넓게 퍼니느 것을 막는다. + 반응형 잃지 않는다. -->
-  <div class="container mx-auto">
+  <div class="container px-3 mx-auto">
     <h1 class="font-bold text-lg">게시물 리스트</h1>
 
     <ul class="mt-5">

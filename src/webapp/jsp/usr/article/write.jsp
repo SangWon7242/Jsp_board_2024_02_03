@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<h1>게시물 작성</h1>
+<%@ include file="../common/head.jspf" %>
 
 <script>
   function ArticleSave__submitForm(form) {
@@ -24,25 +24,31 @@
   }
 </script>
 
-<form method="POST" onsubmit="ArticleSave__submitForm(this); return false">
-  <div>
-    <span>제목</span>
-    <div>
-      <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요.">
-    </div>
-  </div>
+<section class="article-write-wrap">
+  <div class="container px-3 mx-auto">
+    <h1 class="font-bold text-lg">게시물 작성</h1>
+    <form method="POST" onsubmit="ArticleSave__submitForm(this); return false">
+      <div>
+        <span>제목</span>
+        <div>
+          <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요.">
+        </div>
+      </div>
 
-  <div>
-    <span>내용</span>
-    <div>
-      <input name="body" type="text" maxlength="300" placeholder="내용을 입력해주세요.">
-    </div>
-  </div>
+      <div>
+        <span>내용</span>
+        <div>
+          <input name="body" type="text" maxlength="300" placeholder="내용을 입력해주세요.">
+        </div>
+      </div>
 
-  <div>
-    <span>작성</span>
-    <div>
-      <button type="submit">작성</button>
-    </div>
+      <div>
+        <div style="display:flex; gap: 0 5px; margin-top: 5px">
+          <button type="submit">작성</button>
+          <a href="/usr/article/list">취소</a>
+        </div>
+    </form>
   </div>
-</form>
+</section>
+
+<%@ include file="../common/foot.jspf" %>
