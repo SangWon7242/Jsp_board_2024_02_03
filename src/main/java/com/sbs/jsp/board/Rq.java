@@ -64,6 +64,22 @@ public class Rq {
     print(str + "\n");
   }
 
+  public void replace(String url, String msg) {
+    if(msg != null && msg.trim().length() > 0) {
+      println("""
+              <script>
+              alert("%s");
+              </script>
+              """.formatted(msg));
+    }
+
+    println("""
+            <script>
+            location.replace("%s");
+            </script>
+            """.formatted(url));
+  }
+
   public void setAttr(String name, Object value) {
     req.setAttribute(name, value);
   }
