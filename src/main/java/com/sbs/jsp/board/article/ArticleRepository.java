@@ -45,6 +45,8 @@ public class ArticleRepository {
     sql.append("FROM article");
     sql.append("WHERE id = ?", id);
 
+    System.out.println("실행됨");
+
     return new ArticleDto(MysqlUtil.selectRow(sql));
   }
 

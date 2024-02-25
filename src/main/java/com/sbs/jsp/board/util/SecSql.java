@@ -53,6 +53,8 @@ public class SecSql {
 
       if (data instanceof Integer) {
         stmt.setInt(parameterIndex, (int) data);
+      } else if (data instanceof Long) {
+        stmt.setLong(parameterIndex, (long) data);
       } else if (data instanceof String) {
         stmt.setString(parameterIndex, (String) data);
       }

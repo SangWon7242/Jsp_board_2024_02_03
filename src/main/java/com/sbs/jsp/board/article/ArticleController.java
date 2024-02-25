@@ -2,6 +2,7 @@ package com.sbs.jsp.board.article;
 
 import com.sbs.jsp.board.Rq;
 import com.sbs.jsp.board.article.dto.ArticleDto;
+import com.sbs.jsp.board.container.Container;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class ArticleController {
   private ArticleService articleService;
 
   public ArticleController() {
-    articleService = new ArticleService();
+    articleService = Container.articleService;
   }
 
   public void showList(Rq rq) {

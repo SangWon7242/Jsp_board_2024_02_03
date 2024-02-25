@@ -1,6 +1,7 @@
 package com.sbs.jsp.board.article;
 
 import com.sbs.jsp.board.article.dto.ArticleDto;
+import com.sbs.jsp.board.container.Container;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class ArticleService {
   private ArticleRepository articleRepository;
 
   public ArticleService() {
-    articleRepository = new ArticleRepository();
+    articleRepository = Container.articleRepository;
   }
 
   public long write(String title, String body) {
